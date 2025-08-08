@@ -1,0 +1,35 @@
+https://courageous-screw-e22.notion.site/LiveKit-Set-Up-Basic-228387d5b8e9805b9158d66094b2a8d9
+
+Run the LiveKit server locally using Docker:
+
+docker run --rm -it \
+  -p 7880:7880 \
+  -p 7881:7881 \
+  -p 5349:5349/udp \
+  livekit/livekit-server \
+  --dev
+==================================
+
+API: http://localhost:7880
+WebSocket: ws://localhost:7880
+UI: http://localhost:7881
+=================================================
+pip install livekit-server-sdk \
+            livekit-client-sdk \
+            openai \
+            soundfile \
+            torch \
+            faster-whisper \
+            edge-tts \
+            asyncio
+
+====================================
+lk room join --url ws://localhost:7880 --api-key devkey --api-secret secret --publish-demo --identity bot_user my_first_room
+
+=========================
+
+C:\Users\cragh\AppData\Local\Programs\Python\Python310\python.exe agent.py download-files    
+=====================================
+ C:\Users\cragh\AppData\Local\Programs\Python\Python310\python.exe agent.py console
+
+ C:\Users\cragh\AppData\Local\Programs\Python\Python310\python.exe python telephony_agent.py start
